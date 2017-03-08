@@ -1,0 +1,25 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="paymentWebTestSuite" verbose="1" configfailurepolicy="continue"
+       parallel="tests" thread-count="7" preserve-order="true"
+       allow-return-values="true" data-provider-thread-count="10">
+
+
+
+    <test name="My card details Tests" parallel="methods" thread-count="7">
+        <groups>
+            <run>
+                <include name="run"></include>
+            </run>
+        </groups>
+        <packages>
+            <package name="tetpck.*"></package>
+        </packages>
+    </test>
+
+    <listeners>
+        <listener class-name="org.testng.reporters.XMLReporter"/>
+        <listener class-name="org.testng.reporters.TestHTMLReporter"/>
+        <listener class-name="org.testng.reporters.EmailableReporter"/>
+    </listeners>
+
+</suite>

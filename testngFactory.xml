@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite-A" verbose="1">
+    <test name="test" group-by-instances="true" parallel="classes" >
+        <classes>
+            <class name="com.testFactory.example.OnlineStoreTestFactory"></class>
+        </classes>
+    </test>
+</suite>
